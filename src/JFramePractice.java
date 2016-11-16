@@ -4,11 +4,8 @@
    Mr. Blondin
    11/15/2016
 */
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import java.awt.Color;
-import java.awt.FlowLayout;
+import javax.swing.*;
+import java.awt.*;
 
 public class JFramePractice
     {
@@ -18,6 +15,9 @@ public class JFramePractice
         JLabel alabel = new JLabel("Kenton Duprey");
         JButton pressBtn = new JButton("Press Me");
         FlowLayout flow = new FlowLayout();
+        ButtonGroup twoOptions = new ButtonGroup();
+        JCheckBox box1 = new JCheckBox("Here");
+        JCheckBox box2 = new JCheckBox("Here 2");
         
         // setSize(width, height)
         aFrame.setSize(450, 450);
@@ -32,10 +32,15 @@ public class JFramePractice
         aFrame.setResizable(false);
         
         // adds label
-        aFrame.add(alabel);
+        //aFrame.add(alabel);
         
         // adds button
-        aFrame.add(pressBtn);
+        //aFrame.add(pressBtn);
+        twoOptions.add(box1);
+        twoOptions.add(box2);
+        twoOptions.setSelected(box1);
+        twoOptions.setSelected(box2);
+        
         
         // sets default close operation
         aFrame.setDefaultCloseOperation(aFrame.EXIT_ON_CLOSE);
